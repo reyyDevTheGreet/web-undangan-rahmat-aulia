@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Pernikahan Aulia & Rahmat</title>
+<title>Undangan Pernikahan Rahmat &amp; Aulia</title>
 <!-- PREVIEW LINK WA: ganti domain & siapkan preview.jpg (1200x630, <300KB) di folder yang sama -->
 <meta name="description" content="Kami mengundang Anda di hari bahagia kami, Minggu 20 Desember 2026.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Undangan Pernikahan Rahmat &amp; Aulia">
-<meta property="og:description" content="Dengan penuh suka cita, kami mengundang Anda di hari bahagia kami — Minggu, 20 Desember 2026.">
+<meta property="og:description" content="Dengan penuh suka cita, kami mengundang Anda di hari bahagia kami &mdash; Minggu, 20 Desember 2026.">
 <meta property="og:image" content="https://GANTI-DOMAIN-LO.netlify.app/preview.jpg">
 <meta property="og:url" content="https://GANTI-DOMAIN-LO.netlify.app/">
 <meta name="twitter:card" content="summary_large_image">
@@ -111,9 +111,11 @@ h2{font-family:var(--disp);text-align:center;font-size:clamp(26px,5vw,34px);colo
 .field textarea{resize:vertical;min-height:80px}
 .count{font-size:11px;color:#7a8a80;text-align:right;margin-top:4px}
 .radios{display:flex;gap:10px;flex-wrap:wrap}
-.pill{flex:1;min-width:100px;text-align:center;padding:11px 8px;border-radius:10px;border:1px solid rgba(27,67,50,.2);font-size:13px;color:#3d4b43;transition:all .2s}
-.pill input{display:none}
+.pill{flex:1;min-width:100px;text-align:center;padding:11px 8px;border-radius:10px;border:1px solid rgba(27,67,50,.2);font-size:13px;color:#3d4b43;background:#fff;transition:all .2s}
 .pill.on{background:var(--e8);color:var(--iv5);border-color:var(--e8)}
+.stepper{display:flex;align-items:center;justify-content:center;gap:22px}
+.stepper button{width:44px;height:44px;border-radius:50%;background:var(--e8);color:var(--iv5);font-size:22px;line-height:1}
+.stepper span{font-family:var(--disp);font-size:24px;min-width:32px;text-align:center;color:var(--e8)}
 .submit{width:100%;padding:14px;border-radius:12px;background:var(--e8);color:var(--iv5);font-size:14px;font-weight:500;margin-top:6px}
 .submit:hover{background:var(--e7)}
 .note{font-size:12px;color:#7a8a80;margin-top:14px;text-align:center}
@@ -153,7 +155,7 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
     <div class="geye">The Wedding Of</div>
     <div class="gnames">Rahmat, S.T<span>&amp;</span>Aulia</div>
     <div class="gto">Kepada Yth. Bapak/Ibu/Saudara/i<strong id="guestName">Tamu Undangan</strong></div>
-    <button class="gbtn" id="openBtn">✉ Buka Undangan</button>
+    <button class="gbtn" id="openBtn">&#9993; Buka Undangan</button>
   </div>
 </div>
 
@@ -161,7 +163,7 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
   <section id="hero">
     <div class="wrap">
       <div class="bism">Bismillahirrahmanirrahim</div>
-      <p class="quote">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.” — QS. Ar-Rum: 21</p>
+      <p class="quote">&ldquo;Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.&rdquo; &mdash; QS. Ar-Rum: 21</p>
       <div class="hnames">Rahmat, S.T<span>&amp;</span>Aulia</div>
       <div class="parents">
         <b>Fajrul Rahmat Kembaren, S.T</b><br>Putra dari Bpk. Rusli Kembaren, S.Pd.I., M.Pd &amp; Ibu Dra. Asnah<br><br>
@@ -182,7 +184,10 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
         <div class="card"><h3>Resepsi</h3><div class="ed">Minggu, 20 Desember 2026</div><div class="et">11.00 WIB s/d Selesai</div><div class="ev">Kediaman Mempelai Wanita<br>Jl. Rasberry No. 22, Suka Maju, Kec. Binjai Bar., Kota Binjai, Sumatera Utara</div></div>
       </div>
       <div class="countdown" id="countdown"></div>
-      <div class="btns"><a class="btn btn-g" id="calBtn" target="_blank" rel="noopener">📅 Simpan ke Kalender</a></div>
+      <div class="btns">
+        <button type="button" class="btn btn-g" id="calBtn">&#128276; Ingatkan Saya (Tambah ke Kalender)</button>
+        <a class="btn btn-o" id="calGoogle" target="_blank" rel="noopener">Google Calendar</a>
+      </div>
     </div>
   </section>
 
@@ -204,9 +209,9 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
       <p class="sub">Klik tombol di bawah untuk membuka rute langsung dari lokasi Bapak/Ibu/Saudara/i.</p>
       <div class="map">
         <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta lokasi"></iframe>
-        <div class="addr">📍 Kediaman Mempelai Wanita, Jl. Rasberry No. 22, Suka Maju, Kec. Binjai Bar., Kota Binjai, Sumatera Utara</div>
+        <div class="addr">&#128205; Kediaman Mempelai Wanita, Jl. Rasberry No. 22, Suka Maju, Kec. Binjai Bar., Kota Binjai, Sumatera Utara</div>
       </div>
-      <div class="btns"><a class="btn btn-p" id="mapBtn" target="_blank" rel="noopener">📍 Buka di Google Maps</a></div>
+      <div class="btns"><a class="btn btn-p" id="mapBtn" target="_blank" rel="noopener">&#128205; Buka di Google Maps</a></div>
     </div>
   </section>
 
@@ -223,12 +228,18 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
           <div class="field">
             <label class="l">Konfirmasi Kehadiran</label>
             <div class="radios" id="attend">
-              <label class="pill"><input type="radio" name="attend" value="Hadir">✅ Hadir</label>
-              <label class="pill"><input type="radio" name="attend" value="Tidak Hadir">🙏 Tidak Hadir</label>
-              <label class="pill"><input type="radio" name="attend" value="Masih Ragu">🤔 Ragu</label>
+              <button type="button" class="pill" data-v="Hadir">&#9989; Hadir</button>
+              <button type="button" class="pill" data-v="Tidak Hadir">&#128591; Tidak Hadir</button>
             </div>
           </div>
-          <div class="field" id="guestsField"><label class="l" for="rGuests">Jumlah Tamu (termasuk Anda)</label><input type="number" id="rGuests" min="1" max="10" value="1" inputmode="numeric"></div>
+          <div class="field" id="guestsField">
+            <label class="l">Jumlah Tamu (termasuk Anda)</label>
+            <div class="stepper">
+              <button type="button" id="gMin" aria-label="Kurangi">&minus;</button>
+              <span id="gVal">1</span>
+              <button type="button" id="gPlus" aria-label="Tambah">+</button>
+            </div>
+          </div>
           <div class="field">
             <label class="l" for="rMsg">Ucapan &amp; Doa (singkat)</label>
             <textarea id="rMsg" maxlength="150" placeholder="Tuliskan doa singkat untuk kedua mempelai..."></textarea>
@@ -236,7 +247,7 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
           </div>
           <button type="submit" class="submit">Kirim via WhatsApp</button>
         </form>
-        <div class="note">Tombol akan membuka WhatsApp dengan pesan yang sudah terisi — tinggal tekan kirim.</div>
+        <div class="note">Tombol akan membuka WhatsApp dengan pesan yang sudah terisi &mdash; tinggal tekan kirim.</div>
       </div>
     </div>
   </section>
@@ -257,10 +268,10 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
       <p class="ct">Kami yang berbahagia, beserta keluarga besar</p>
     </div>
   </section>
-  <footer>Dibuat dengan ♥ — Undangan Digital 2026</footer>
+  <footer>Dibuat dengan &hearts; &mdash; Undangan Digital 2026</footer>
 </div>
 
-<button id="music" aria-label="Musik">🔊</button>
+<button id="music" aria-label="Musik">&#128266;</button>
 
 <!-- Pembuat link personal: buka ?admin=1 -->
 <div id="admin">
@@ -268,7 +279,7 @@ footer{text-align:center;padding:34px 0 60px;font-size:11px;color:#a2aca4}
     <h2>Buat Link Undangan</h2>
     <div class="field"><label class="l" for="genName">Nama Tamu</label><input type="text" id="genName" placeholder="Contoh: Bapak Hendra &amp; Keluarga"></div>
     <div class="field"><label class="l" for="genPhone">Nomor WA Tamu (opsional)</label><input type="tel" id="genPhone" placeholder="6281234567890"></div>
-    <button class="btn btn-g" id="genBtn" style="width:100%;justify-content:center">🔗 Buat Link &amp; Kirim ke WhatsApp</button>
+    <button class="btn btn-g" id="genBtn" style="width:100%;justify-content:center">&#128279; Buat Link &amp; Kirim ke WhatsApp</button>
   </div>
 </div>
 
@@ -281,7 +292,6 @@ const EVENT_END = "2026-12-20T14:00:00+07:00";    // perkiraan selesai (untuk ka
 const EVENT_TITLE = "Pernikahan Rahmat & Aulia";
 const EVENT_PLACE = "Jl. Rasberry No. 22, Suka Maju, Binjai Barat, Kota Binjai, Sumatera Utara";
 // Rekening amplop digital. Kosongkan array ([]) kalau tidak mau menampilkan bagian ini.
-// PENTING: ganti data contoh di bawah dengan rekening asli sebelum disebar!
 const BANKS = [
   { bank: "Dana", no: "081263353705", nama: "Nabila Ramahdani" },
 ];
@@ -306,7 +316,7 @@ if (params.get('admin') === '1') {
     const phone = $('genPhone').value.replace(/\D/g, '');
     if (!nm) { alert('Isi nama tamu dulu ya.'); return; }
     const link = `${location.origin}${location.pathname}?to=${encodeURIComponent(nm)}`;
-    const text = `Assalamu'alaikum ${nm}, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di pernikahan Rahmat & Aulia. Berikut undangan digitalnya:\n${link}\n\nMohon doa restu & kehadirannya 🙏`;
+    const text = `Assalamu'alaikum ${nm}, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di pernikahan Rahmat & Aulia. Berikut undangan digitalnya:\n${link}\n\nMohon doa restu & kehadirannya \u{1F64F}`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
   });
 } else {
@@ -327,7 +337,7 @@ function init() {
   // Kelopak
   for (let i = 0; i < 14; i++) {
     const p = document.createElement('div');
-    p.className = 'petal'; p.textContent = '❀';
+    p.className = 'petal'; p.textContent = '\u2740';
     p.style.left = Math.random() * 100 + 'vw';
     p.style.fontSize = (10 + Math.random() * 10) + 'px';
     p.style.animationDuration = (10 + Math.random() * 14) + 's';
@@ -351,13 +361,13 @@ function init() {
     setTimeout(() => { $('gate').style.display = 'none'; revealOnScroll(); }, 1100);
   });
   musicBtn.addEventListener('click', () => {
-    if (bgm.paused) { bgm.play().catch(() => {}); musicBtn.textContent = '🔊'; }
-    else { bgm.pause(); musicBtn.textContent = '🔇'; }
+    if (bgm.paused) { bgm.play().catch(() => {}); musicBtn.textContent = '\u{1F50A}'; }
+    else { bgm.pause(); musicBtn.textContent = '\u{1F507}'; }
   });
   let wasPlaying = false;
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { wasPlaying = !bgm.paused; if (wasPlaying) { bgm.pause(); musicBtn.textContent = '🔇'; } }
-    else if (wasPlaying) { bgm.play().catch(() => {}); musicBtn.textContent = '🔊'; }
+    if (document.hidden) { wasPlaying = !bgm.paused; if (wasPlaying) { bgm.pause(); musicBtn.textContent = '\u{1F507}'; } }
+    else if (wasPlaying) { bgm.play().catch(() => {}); musicBtn.textContent = '\u{1F50A}'; }
   });
 
   function revealOnScroll() {
@@ -369,16 +379,40 @@ function init() {
   const target = new Date(EVENT_DATE).getTime();
   function tick() {
     const diff = target - Date.now();
-    if (diff <= 0) { $('countdown').innerHTML = '<div class="done">Hari bahagia telah tiba — terima kasih atas doa & restunya 🤍</div>'; return false; }
+    if (diff <= 0) { $('countdown').innerHTML = '<div class="done">Hari bahagia telah tiba &mdash; terima kasih atas doa &amp; restunya &#129293;</div>'; return false; }
     const v = [Math.floor(diff / 864e5), Math.floor(diff % 864e5 / 36e5), Math.floor(diff % 36e5 / 6e4), Math.floor(diff % 6e4 / 1e3)];
     $('countdown').innerHTML = v.map((n, i) => `<div class="cd"><b>${String(n).padStart(2, '0')}</b><small>${['Hari','Jam','Menit','Detik'][i]}</small></div>`).join('');
     return true;
   }
   if (tick()) { const t = setInterval(() => { if (!tick()) clearInterval(t); }, 1000); }
 
-  // Simpan ke kalender
+  // Simpan ke kalender (.ics, tanpa login) + cadangan Google Calendar
   const fmt = d => new Date(d).toISOString().replace(/[-:]|\.\d{3}/g, '');
-  $('calBtn').href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(EVENT_TITLE)}&dates=${fmt(EVENT_DATE)}/${fmt(EVENT_END)}&location=${encodeURIComponent(EVENT_PLACE)}&details=${encodeURIComponent('Akad 09.00 WIB, resepsi 11.00 WIB. Mohon doa restu & kehadirannya.')}`;
+  const esc = s => s.replace(/[\\,;]/g, '\\$&');
+  const DESC = 'Akad 09.00 WIB, resepsi 11.00 WIB. Mohon doa restu & kehadirannya.';
+  $('calGoogle').href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(EVENT_TITLE)}&dates=${fmt(EVENT_DATE)}/${fmt(EVENT_END)}&location=${encodeURIComponent(EVENT_PLACE)}&details=${encodeURIComponent(DESC)}`;
+  $('calBtn').addEventListener('click', () => {
+    const ics = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Undangan//ID', 'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      'UID:undangan-rahmat-aulia-20261220@undangan',
+      'DTSTAMP:' + fmt(new Date()),
+      'DTSTART:' + fmt(EVENT_DATE),
+      'DTEND:' + fmt(EVENT_END),
+      'SUMMARY:' + esc(EVENT_TITLE),
+      'LOCATION:' + esc(EVENT_PLACE),
+      'DESCRIPTION:' + esc(DESC),
+      'BEGIN:VALARM', 'TRIGGER:-P3D', 'ACTION:DISPLAY', 'DESCRIPTION:3 hari lagi pernikahan Rahmat & Aulia', 'END:VALARM',
+      'BEGIN:VALARM', 'TRIGGER:-P1D', 'ACTION:DISPLAY', 'DESCRIPTION:Besok hari pernikahan Rahmat & Aulia', 'END:VALARM',
+      'BEGIN:VALARM', 'TRIGGER:-PT2H', 'ACTION:DISPLAY', 'DESCRIPTION:2 jam lagi akad nikah dimulai', 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+    const url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = 'undangan-rahmat-aulia.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  });
 
   // Amplop digital
   if (!BANKS.length) { $('amplop').style.display = 'none'; }
@@ -387,36 +421,45 @@ function init() {
     d.className = 'bank';
     d.innerHTML = `<b>${b.bank}</b><div class="no">${b.no}</div><small>a.n. ${b.nama}</small>`;
     const btn = document.createElement('button');
-    btn.className = 'btn btn-o'; btn.textContent = '📋 Salin nomor';
+    btn.className = 'btn btn-o'; btn.textContent = '\u{1F4CB} Salin nomor';
     btn.addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(b.no); }
       catch (_) { const t = document.createElement('textarea'); t.value = b.no; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
-      btn.textContent = '✓ Tersalin';
-      setTimeout(() => { btn.textContent = '📋 Salin nomor'; }, 2000);
+      btn.textContent = '\u2713 Tersalin';
+      setTimeout(() => { btn.textContent = '\u{1F4CB} Salin nomor'; }, 2000);
     });
     d.appendChild(btn);
     $('bankList').appendChild(d);
   });
 
   // RSVP -> WhatsApp
-  document.querySelectorAll('#attend .pill').forEach(pill => pill.addEventListener('click', () => {
+  let attendVal = '', guests = 1;
+  document.querySelectorAll('#attend .pill').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('#attend .pill').forEach(p => p.classList.remove('on'));
-    pill.classList.add('on');
-    pill.querySelector('input').checked = true;
-    $('guestsField').style.display = pill.querySelector('input').value === 'Tidak Hadir' ? 'none' : 'block';
+    b.classList.add('on');
+    attendVal = b.dataset.v;
+    $('guestsField').style.display = attendVal === 'Tidak Hadir' ? 'none' : 'block';
   }));
+  $('gMin').addEventListener('click', () => { guests = Math.max(1, guests - 1); $('gVal').textContent = guests; });
+  $('gPlus').addEventListener('click', () => { guests = Math.min(10, guests + 1); $('gVal').textContent = guests; });
   $('rMsg').addEventListener('input', e => { $('cnt').textContent = e.target.value.length; });
 
   $('rsvpForm').addEventListener('submit', e => {
     e.preventDefault();
     const name = $('rName').value.trim();
-    const att = document.querySelector('#attend input:checked');
-    if (!name || !att) { alert('Mohon isi nama dan pilih konfirmasi kehadiran ya.'); return; }
-    const guests = Math.min(10, Math.max(1, parseInt($('rGuests').value) || 1));
+    if (!name || !attendVal) { alert('Mohon isi nama dan pilih konfirmasi kehadiran ya.'); return; }
     const msg = $('rMsg').value.trim();
-    let text = `Assalamu'alaikum, saya *${name}*.\nKonfirmasi kehadiran: *${att.value}*`;
-    if (att.value !== 'Tidak Hadir') text += `\nJumlah tamu: ${guests} orang`;
-    if (msg) text += `\nUcapan: ${msg}`;
+    const hadir = attendVal === 'Hadir';
+    let text = `Assalamu'alaikum Warahmatullahi Wabarakatuh \u{1F932}\n\n` +
+      `Dengan hormat, saya *${name}* mengucapkan terima kasih atas undangan pernikahan *Rahmat & Aulia* \u{1F48D}\n\n`;
+    text += hadir
+      ? `\u2705 Kehadiran: *Insya Allah hadir*\n\u{1F465} Jumlah tamu: *${guests} orang*\n`
+      : `\u{1F64F} Kehadiran: *Mohon maaf, belum dapat hadir*\n`;
+    if (msg) text += `\u{1F48C} Ucapan & doa: ${msg}\n`;
+    text += hadir
+      ? `\nSemoga Allah SWT menghimpun kalian dalam keberkahan, sakinah, mawaddah, wa rahmah \u{1F90D}`
+      : `\nSemoga acaranya berjalan lancar dan penuh berkah \u{1F90D}`;
+    text += `\nWassalamu'alaikum Warahmatullahi Wabarakatuh.`;
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   });
 
